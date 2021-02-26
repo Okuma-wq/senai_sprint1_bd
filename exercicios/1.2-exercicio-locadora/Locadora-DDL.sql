@@ -5,6 +5,7 @@ USE Locadora;
 CREATE TABLE Empresa
 (
 	idEmpresa INT PRIMARY KEY IDENTITY NOT NULL
+	, Nome VARCHAR(200)
 );
 
 CREATE TABLE Veiculo
