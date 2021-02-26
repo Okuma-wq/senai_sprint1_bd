@@ -8,10 +8,11 @@ INSERT INTO Veiculo (idEmpresa,Marca,Modelo,Placa)
 VALUES	(2, 'Toyota', 'RAV4', 'XXX-0000')
 		, (1, 'Hyundai', 'Creta', 'XXX-0000');
 
-INSERT INTO Cliente (Nome, Numero_de_Identidade, CPF)
-VALUES	('André', '00.000.000-00', '000.000.000-00')
-		, ('Roberto', '00.000.000-00', '000.000.000-00');
+INSERT INTO Cliente (Nome, CPF)
+VALUES	('André', '000.000.000-00')
+		, ('Roberto', '000.000.000-00');
 
-INSERT INTO Aluguel (idVeiculo, idCliente, Preço, Data)
-VALUES	(2, 1, 425.00, 03/09/2021)
-		, (1, 2, 500.00, 09/05/2021);
+INSERT INTO Aluguel (idVeiculo, idCliente, Data_de_Retirada, Data_de_Devolução)
+VALUES	(2, 1, '03/01/2019', '10/01/2019')
+		, (1, 2, '09/02/2020', '16/02/2020')
+		, (1, 1, '17/02/2020', '24/02/2020');

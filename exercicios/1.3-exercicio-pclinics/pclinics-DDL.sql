@@ -5,7 +5,9 @@ USE pclinics;
 CREATE TABLE Clinica
 (
 	idClinica INT PRIMARY KEY IDENTITY NOT NULL
+	, Nome VARCHAR(200) NOT NULL
 	, Endereço VARCHAR(200) NOT NULL
+	, Razão_Social VARCHAR(200) NOT NULL
 );
 
 CREATE TABLE Veterinario
@@ -13,6 +15,7 @@ CREATE TABLE Veterinario
 	idVeterinario INT PRIMARY KEY IDENTITY NOT NULL
 	, idClinica INT FOREIGN KEY REFERENCES Clinica(idClinica) NOT NULL
 	, Nome VARCHAR(200) NOT NULL
+	, CRMV VARCHAR(20)
 );
 
 CREATE TABLE Pet
@@ -30,5 +33,6 @@ CREATE TABLE Consulta
 	idConsulta INT PRIMARY KEY IDENTITY NOT NULL
 	, idVeterinario INT FOREIGN KEY REFERENCES Veterinario(idVeterinario) NOT NULL
 	, idPet INT FOREIGN KEY REFERENCES Pet(idPet) NOT NULL
-	, Data DATETIME NOT NULL
+	, Descrição_da_Consulta VARCHAR(600)
+	, Data_da_Consulta DATETIME NOT NULL
 );

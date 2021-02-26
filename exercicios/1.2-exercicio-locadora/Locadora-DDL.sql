@@ -5,7 +5,6 @@ USE Locadora;
 CREATE TABLE Empresa
 (
 	idEmpresa INT PRIMARY KEY IDENTITY NOT NULL
-	, Nome VARCHAR(200)
 );
 
 CREATE TABLE Veiculo
@@ -21,7 +20,6 @@ CREATE TABLE Cliente
 (
 	idCliente INT PRIMARY KEY IDENTITY NOT NULL
 	, Nome VARCHAR(200) NOT NULL
-	, Numero_de_Identidade VARCHAR(200) NOT NULL
 	, CPF VARCHAR(200) NOT NULL
 );
 
@@ -30,6 +28,7 @@ CREATE TABLE Aluguel
 	idAluguel INT PRIMARY KEY IDENTITY NOT NULL
 	, idVeiculo	INT FOREIGN KEY REFERENCES Veiculo(idVeiculo) NOT NULL
 	, idCliente INT FOREIGN KEY REFERENCES Cliente(idCliente) NOT NULL
-	, Preço SMALLMONEY NOT NULL
-	, Data DATETIME NOT NULL
+	, Data_de_Retirada DATE NOT NULL
+	, Data_de_Devolução DATE NOT NULL
 );
+
