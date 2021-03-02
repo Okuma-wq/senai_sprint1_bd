@@ -13,10 +13,11 @@ SELECT Nome_da_Classe FROM Classe;
 SELECT * FROM Habilidade;
 
 -- 10. Realizar a contagem de quantas habilidades estão cadastradas
-SELECT COUNT(*) AS Numero_de_Habilidades_Cadastradas FROM Habilidade;
+SELECT COUNT(idHabilidade) AS Numero_de_Habilidades_Cadastradas FROM Habilidade;
 
 -- 11. Selecionar somente os id’s das habilidades classificando-os por ordem crescente
-SELECT idHabilidade FROM Habilidade;
+SELECT idHabilidade FROM Habilidade
+ORDER BY idHabilidade ASC;
 
 -- 12. Selecionar todos os tipos de habilidades
 SELECT * FROM Tipo_de_Habilidade;
