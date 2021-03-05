@@ -17,3 +17,11 @@ CREATE TABLE tlb_HistoricoVendas
 	, Quantidade_Vendida INT
 	, Data_da_Venda DATETIME
 );
+
+CREATE TABLE Tlb_Reestoque
+(
+	idReestoque INT PRIMARY KEY IDENTITY
+	, Prod_Reestocado VARCHAR(200)
+	, Quant_Comprada INT
+	, Data_Reestoque DATETIME
+);

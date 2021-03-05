@@ -21,5 +21,10 @@ BEGIN
 
 END
 
+CREATE TRIGGER Att_Reestoque
+ON Tlb_Reestoque
+FOR INSERT
+AS
+
 INSERT INTO tlb_HistoricoVendas (Prod_Vendido, Quantidade_Vendida, Data_da_Venda)
 VALUES	('PS5', 30, GETDATE());
